@@ -20,6 +20,9 @@ jobs:
  
       - name: Instalar dependencias
         run: pip install -r requirements.txt
+
+      - name: Inicializar Browser
+        run: rfbrowser init
  
       - name: Ejecutar pruebas de API
         run: robot --outputdir resultados api
