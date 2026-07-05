@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.6 on win32)" generated="2026-07-04T21:24:39.224490" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Ui" source="C:\Users\ADMIN\robotframework-labs\ui">
+<suite id="s1-s1-s1" name="04 Login" source="C:\Users\ADMIN\robotframework-labs\ui\04_login.robot">
+<test id="s1-s1-s1-t1" name="Login Exitoso Con Usuario Valido" line="9">
+<kw name="Abrir Sitio Swag Labs">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-04T21:24:39.567735" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-04T21:24:39.567530" elapsed="6.848075"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-04T21:24:46.415911" elapsed="0.034094"/>
+</kw>
+<status status="PASS" start="2026-07-04T21:24:39.566959" elapsed="6.883311"/>
+</kw>
+<kw name="Iniciar Sesion">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-04T21:24:46.452370" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-04T21:24:46.451630" elapsed="0.126068"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-07-04T21:24:46.578114" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2026-07-04T21:24:46.611290" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${clave}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-04T21:24:46.577862" elapsed="0.083804"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-04T21:24:46.662042" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-04T21:24:46.661828" elapsed="0.112323"/>
+</kw>
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2026-07-04T21:24:46.450631" elapsed="0.323683"/>
+</kw>
+<kw name="Verificar Login Exitoso">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Products</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-07-04T21:24:46.774843" elapsed="0.012996"/>
+</kw>
+<status status="PASS" start="2026-07-04T21:24:46.774483" elapsed="0.013548"/>
+</kw>
+<status status="PASS" start="2026-07-04T21:24:39.566449" elapsed="7.221813"/>
+</test>
+<test id="s1-s1-s1-t2" name="Login Fallido Con Usuario Bloqueado" line="15">
+<kw name="Abrir Sitio Swag Labs">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-04T21:24:46.789486" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-04T21:24:46.789279" elapsed="1.965656"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-04T21:24:48.755247" elapsed="0.032744"/>
+</kw>
+<status status="PASS" start="2026-07-04T21:24:46.789010" elapsed="1.999162"/>
+</kw>
+<kw name="Iniciar Sesion">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-04T21:24:48.789183" level="INFO">Typing text 'locked_out_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-04T21:24:48.788833" elapsed="0.099664"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-07-04T21:24:48.888909" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2026-07-04T21:24:48.914950" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${clave}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-04T21:24:48.888648" elapsed="0.087572"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-04T21:24:48.976597" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-04T21:24:48.976390" elapsed="0.095240"/>
+</kw>
+<arg>locked_out_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2026-07-04T21:24:48.788406" elapsed="0.283406"/>
+</kw>
+<kw name="Verificar Mensaje De Error">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-07-04T21:24:49.092818" level="INFO">Element 'css:h3[data-test='error']' is displayed.</msg>
+<arg>css:h3[data-test='error']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-04T21:24:49.072399" elapsed="0.020553"/>
+</kw>
+<status status="PASS" start="2026-07-04T21:24:49.072042" elapsed="0.021047"/>
+</kw>
+<status status="PASS" start="2026-07-04T21:24:46.788638" elapsed="2.304634"/>
+</test>
+<status status="PASS" start="2026-07-04T21:24:39.264951" elapsed="9.828908"/>
+</suite>
+<status status="PASS" start="2026-07-04T21:24:39.263971" elapsed="9.830745"/>
+</suite>
+<status status="PASS" start="2026-07-04T21:24:39.225846" elapsed="9.869489"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Suites" id="s1" pass="2" fail="0" skip="0">Suites</stat>
+<stat name="Ui" id="s1-s1" pass="2" fail="0" skip="0">Suites.Ui</stat>
+<stat name="04 Login" id="s1-s1-s1" pass="2" fail="0" skip="0">Suites.Ui.04 Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
